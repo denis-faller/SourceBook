@@ -1,0 +1,28 @@
+<?php
+declare(strict_types = 1);
+
+namespace popp\ch09\batch07;
+
+include "C:/USR/www/SourceBook/vendor/autoload.php";
+
+class Runner
+{
+    public static function run()
+    {
+/* listing 09.18 */
+        $man = new CommsManager(CommsManager::MEGA);
+        print (get_class($man->getApptEncoder())) . "\n";
+        $man = new CommsManager(CommsManager::BLOGGS);
+        print (get_class($man->getApptEncoder())) . "\n";
+/* /listing 09.18 */
+    }
+
+    public static function run2()
+    {
+        $man = new CommsManager(CommsManager::MEGA);
+        print $man->getHeaderText();
+        $man = new CommsManager(CommsManager::BLOGGS);
+        print $man->getHeaderText();
+    }
+}
+Runner::run2();

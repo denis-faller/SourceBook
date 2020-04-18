@@ -1,0 +1,10 @@
+{
+	"requre-dev": {
+		"phpunit/phpunit": "*"
+	},
+	"autoload": {
+        "psr-4": { 
+            "popp\\ch18\\batch02\\": [""]
+        }
+    }
+}
